@@ -1,0 +1,20 @@
+name: my-profile
+on: 
+    push: 
+        branches:
+            -main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+            - uses: actions/setup-node@v3
+              with:
+                node-version: 16.x
+            - run: npx yarn install
+            - run: npx yarn build
+            - uses: actions/upload-artifact@v3
+              with: 
+                name: web-build
+                path: .next
+                retention-days: 5
