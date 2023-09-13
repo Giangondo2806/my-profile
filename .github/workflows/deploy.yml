@@ -17,6 +17,6 @@ jobs:
               with: 
                 name: web-build
                 path: |
-                    ./.next
+                    .next
                     package.json
                 retention-days: 5
