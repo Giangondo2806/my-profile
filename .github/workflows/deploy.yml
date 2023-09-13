@@ -16,5 +16,7 @@ jobs:
             - uses: actions/upload-artifact@v3
               with: 
                 name: web-build
-                path: .next
+                path: |
+                    ./.next
+                    package.json
                 retention-days: 5
