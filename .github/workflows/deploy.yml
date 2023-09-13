@@ -2,7 +2,7 @@ name: my-profile
 on: 
     push: 
         branches:
-            -main
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest
